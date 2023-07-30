@@ -17,3 +17,7 @@ AS A Singer
 I WANT TO study my fellow artists
 SO THAT I can get inspired for my future work
 ```
+
+## Sources
+
+- Gitignore file: https://gist.github.com/andreasonny83/b24e38b7772a3ea362d8e8d238d5a7bc
