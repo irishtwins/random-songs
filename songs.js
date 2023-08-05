@@ -17,10 +17,10 @@ const artists = [
     let result = "<ul>"; 
     for (let item of nameList) {
         result += `
-        <li>
-            ${item.name} 
-            <button data-id="${item.id}>Get Quote</button>
-        </li>`;
+            <li>
+                ${item.name} 
+                <button data-id="${item.id}">Get Quote</button>
+            </li>`;
     }
     result += "</ul>";
 
@@ -31,7 +31,7 @@ const artists = [
 
  function jsArtistsContainerClicked(event) {
     if(event.target.tagName === "BUTTON") {
-        alert(event.target.dataset.id);
+       alert(event.target.dataset.id);
     }
  }
 
