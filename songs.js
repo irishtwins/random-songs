@@ -17,9 +17,9 @@ const artists = [
     let result = "<ul>"; 
     for (let item of nameList) {
         result += `
-            <li>
+            <li class="m-4">
                 ${item.name} 
-                <button data-id="${item.id}">Get Quote</button>
+                <button data-id="${item.id}" class="btn btn-primary">Get Quote</button>
             </li>`;
     }
     result += "</ul>";
