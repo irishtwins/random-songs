@@ -50,5 +50,12 @@ const artists = [
     }
  }
 
-
  document.querySelector(".js-artists").addEventListener('click', jsArtistsContainerClicked);
+
+function searchFormSubmitted(event) {
+      event.preventDefault();
+      let inputField = document.querySelector('[name="search-artist"]');
+      console.log(inputField.value);
+}
+
+ document.querySelector(".js-search-form").addEventListener("submit", searchFormSubmitted);
