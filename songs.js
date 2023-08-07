@@ -56,6 +56,7 @@ function searchFormSubmitted(event) {
       event.preventDefault();
       let inputField = document.querySelector('[name="search-artist"]');
       console.log(inputField.value);
+      inputField.value = "";
 }
 
  document.querySelector(".js-search-form").addEventListener("submit", searchFormSubmitted);
