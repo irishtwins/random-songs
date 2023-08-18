@@ -23,6 +23,7 @@ SO THAT I can get inspired for my future work
 When entering text in the input field, an API call is requested:
 
 ```
+// POST request cannot be used in absence of a csrf token
 POST https://songsexcerpt.mohd.app/artists/search
 Payload: {"artist_name":"stevie ni"}
 

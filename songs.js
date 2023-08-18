@@ -13,6 +13,24 @@ const artists = [
     },
  ];
 
+ function loadArtist(searchText) {
+     fetch('./artist-list-250.json')
+         .then(data => data.json())
+         .then(response => {
+            let filteredResponse = [];
+            let limit = 10
+            debugger;
+            for (let i = 0; i < response.length && limit > 0; i++) {
+               let item = response[i];
+               if  (item.name.includes(searchText)) {
+                    filteredResponse.push(item);
+                    limit -= 1;
+               }
+            }
+            renderArtists(filteredResponse);
+         });
+}
+
  function renderArtists(nameList) {
     let result = "<ul>"; 
     for (let item of nameList) {
@@ -55,7 +73,7 @@ const artists = [
 function searchFormSubmitted(event) {
       event.preventDefault();
       let inputField = document.querySelector('[name="search-artist"]');
-      console.log(inputField.value);
+      loadArtist(inputField.value);
       inputField.value = "";
 }
 
